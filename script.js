@@ -1,4 +1,4 @@
-let a = 1;
+/* let a = 1;
 console.log(a);
 
 a = "test";
@@ -58,3 +58,124 @@ console.log(d);
 let num = 5;
 let num2 = 4.6;
 console.log(typeof num);
+
+const paymentRate = 80;
+const newWorkHours = 40;
+const available = (11 - 2) * 5;
+console.log('Смогу ли работать ' + (available > newWorkHours));
+console.log('Стоимость работ: ' + newWorkHours * paymentRate + '$');
+
+// шаблонные строки
+const projectName = 'сайт магазина';
+const price = 2000;
+const author = 'Иван Иванов';
+
+const template = author + ' заказал ' + projectName + ' по цене ' + price + '$'
+console.log( template);
+
+const template2 = `${author} заказал ${projectName} по цене ${price}$`
+console.log(template2);
+
+const template3 = 'Проект \n' + 'Цена:' + price + '$';
+console.log(template3);
+
+const template4 = `Проект
+цена: ${price}$`
+
+console.log(template4);
+
+// поток
+const money = 100;
+
+if (money > 50) {
+    console.log('куплено');
+} else if (money > 50) {
+    console.log('куплен мини продукт');
+} else {
+    console.log('не куплено');
+}
+
+const deposit = 10000;
+const rate = 0.07;
+const depositLength = 24;
+
+const housePrice = 13500;
+
+const result = deposit * (1 + rate / 12 ) ** depositLength;
+if (result > housePrice) {
+    console.log(`Мы накопили: ${result}.  Может купить дом. Остаток ${result - housePrice}`);
+} else {
+    console.log(`Мы накопили: ${result}. Не хватает средств`);
+}
+
+// оператор равенства
+const secretNumber = 7;
+
+if (secretNumber === 7) {
+    console.log('угадано');
+}
+
+const q = prompt('Введите число');
+if (q == 7) {
+    console.log('угадано не строго');
+} else {
+    console.log('не угадал');
+}
+
+// switch
+const role = prompt('введите роль:');
+
+switch (role) {
+    case 'manager': // role === 'manager'
+        console.log('менеджер');
+        break
+    case 'admin': // role === 'admin'
+        console.log('админ');
+        break
+    case 'CEO': // role === 'CEO'
+        console.log('СЕО');
+        break
+    default:
+        console.log('мы тебя не знаем');
+}
+
+switch (role) {
+    case 'manager':
+    case 'admin':
+        console.log('не руководитель');
+        break
+    case 'CEO':
+        console.log('руководитель');
+        break
+    default:
+        console.log('мы тебя не знаем');
+}*/
+
+const bmwPrice = 100000;
+const fordPrice = 10000;
+const budget = 20000
+
+let message = budget > bmwPrice
+    ? 'BMW'
+    : budget > fordPrice ? 'FORD' : 'ВЕЛОСИПЕД';
+
+console.log(`я хочу купить ${message}`);
+
+const captcha = prompt('сколько будет 7 + 15' || 'сколько будет 7 - 15')
+
+/* if (captcha === 22 || captcha === '-8') {
+    console.log('успех');
+} else if (captcha === 'я не робот') {
+    console.log('успех');
+} else {
+    console.log('вы робот');
+} */
+
+switch (true) {
+    case captcha === '22' || captcha === '-8' || captcha === 'я не робот':
+        console.log('успех');
+        break;
+
+    default:
+        console.log('вы робот');
+}
