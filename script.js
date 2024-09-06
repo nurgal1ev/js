@@ -222,7 +222,7 @@ const isSelling = true;
 if ((balance > 1000 || bonusBalance > 100) && (isBanned && isExist && !isSelling) === false) {
     console.log('куплено');
 }
-*/
+
 
 
 const balance = 1200;
@@ -232,4 +232,44 @@ const isExist = false;
 const isSelling = true;
 
 const canBuy = (balance > 1000 || bonusBalance > 100) && !isBanned && !isExist && isSelling;
-console.log(canBuy);
+console.log(canBuy); */
+
+// функции
+function logName(name, surname) {
+    console.log(`Мое имя ${name} ${surname}`);
+}
+logName('Вася', 'Васин');
+
+
+////
+function countDepositSum(depositInUSD, month, rate) {
+    return depositInUSD * (1 + rate / 12) ** month;
+}
+
+const example1 = countDepositSum(1000, 24, 0.12);
+console.log(example1);
+
+const example2 = countDepositSum(1000, 48, 0.10);
+console.log(example2);
+
+////
+/*
+function powerOfTwo(num) {
+    return num * num;
+}
+console.log(powerOfTwo(563));
+
+////
+const poft = function (num) {
+    return num * num;
+}
+console.log(poft(6)); */
+
+////
+function powerOfTwo(num) {
+    return num * num;
+}
+console.log(powerOfTwo(7));
+
+const poft = (num) => num * num;
+console.log(poft(3));
