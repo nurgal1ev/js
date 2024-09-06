@@ -149,7 +149,7 @@ switch (role) {
         break
     default:
         console.log('мы тебя не знаем');
-}*/
+}
 
 const bmwPrice = 100000;
 const fordPrice = 10000;
@@ -163,13 +163,13 @@ console.log(`я хочу купить ${message}`);
 
 const captcha = prompt('сколько будет 7 + 15' || 'сколько будет 7 - 15')
 
-/* if (captcha === 22 || captcha === '-8') {
+if (captcha === 22 || captcha === '-8') {
     console.log('успех');
 } else if (captcha === 'я не робот') {
     console.log('успех');
 } else {
     console.log('вы робот');
-} */
+}
 
 switch (true) {
     case captcha === '22' || captcha === '-8' || captcha === 'я не робот':
@@ -179,3 +179,57 @@ switch (true) {
     default:
         console.log('вы робот');
 }
+
+// булева логика
+const isAdmin = false;
+const canWrite = true;
+
+console.log(`системный файл ${isAdmin && canWrite}`);
+console.log(`обычный файл ${isAdmin || canWrite}`);
+console.log(`инвертируем права ${!isAdmin && canWrite}`);
+
+const isEdited = true;
+const isSuperAdmin = true;
+
+console.log(`системный файл с редактированием ${isAdmin || isSuperAdmin && canWrite && isEdited}`);
+
+
+console.log('Вася' || 'Оля');
+console.log(false || 'Оля');
+console.log('Вася' || false);
+
+console.log('Вася' && 'Оля');
+console.log('Вася' && false);
+console.log(true && false);
+
+let a = 'Петя';
+const username = a || 'Вася';
+console.log(username);
+
+const isAdmin = true;
+const filename = isAdmin && 'file.mp4';
+console.log(filename);
+
+let user = 'Саша';
+console.log(user || 'default user');
+
+const balance = 1000;
+const bonusBalance = 110;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
+
+if ((balance > 1000 || bonusBalance > 100) && (isBanned && isExist && !isSelling) === false) {
+    console.log('куплено');
+}
+*/
+
+
+const balance = 1200;
+const bonusBalance = 90;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
+
+const canBuy = (balance > 1000 || bonusBalance > 100) && !isBanned && !isExist && isSelling;
+console.log(canBuy);
